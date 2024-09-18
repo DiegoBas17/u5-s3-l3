@@ -17,7 +17,7 @@ public class Libro{
     public int getNumeroPagine() {
         return elementi.stream().mapToInt(Elemento::getNumeroPagine).sum();
     }
-    
+
     public void stampa() {
         System.out.println("stampa libro:");
         elementi.forEach(Elemento::stampa);
