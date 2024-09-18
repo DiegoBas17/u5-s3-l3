@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import java.util.ArrayList;
 import java.util.List;
 @AllArgsConstructor
-public class Libro implements Elemento{
+public class Libro{
     private double prezzo;
     private List<String> autori;
     private List<Elemento> elementi;
@@ -14,12 +14,10 @@ public class Libro implements Elemento{
         return elementi.stream().mapToInt(Elemento::getNumeroPagine).sum();
     }
 
-    @Override
     public int getNumeroPagine() {
         return elementi.stream().mapToInt(Elemento::getNumeroPagine).sum();
     }
-
-    @Override
+    
     public void stampa() {
         System.out.println("stampa libro:");
         elementi.forEach(Elemento::stampa);
