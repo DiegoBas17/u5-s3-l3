@@ -13,6 +13,6 @@ public class ChainRunner implements CommandLineRunner {
         Capitano capitano = new Capitano("Capitano", 2000, maggiore);
         Tenente tenente = new Tenente("Tenente", 1000, capitano);
 
-        generale.stipendoMinimo(2000);
+        tenente.stipendoMinimo(2000);
     }
 }

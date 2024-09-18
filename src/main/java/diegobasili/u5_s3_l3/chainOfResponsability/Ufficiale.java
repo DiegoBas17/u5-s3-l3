@@ -14,7 +14,7 @@ public abstract class Ufficiale {
     }
 
     public void stipendoMinimo (int importo) {
-        if (importo <= stipendio && superiore != null) {
+        if (importo >= stipendio && superiore != null) {
             System.out.println("il " + grado + " percepisce lo stipendio di: " + importo);
             superiore.stipendoMinimo(importo);
         } else {
